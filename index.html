@@ -1,776 +1,509 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COLEFAR LTDA - Fundo de Investimento Imobiliário</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome para ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #2e7d32;
-            --secondary-color: #1b5e20;
-            --light-color: #81c784;
-            --dark-color: #1b5e20;
-            --text-color: #333;
-            --light-text: #f5f5f5;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--text-color);
-            overflow-x: hidden;
-        }
-
-        .navbar {
-            background-color: var(--primary-color) !important;
-        }
-
-        .navbar-brand img {
-            height: 50px;
-        }
-
-        .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 120px 0;
-            text-align: center;
-        }
-
-        .section-title {
-            color: var(--primary-color);
-            position: relative;
-            margin-bottom: 40px;
-            font-weight: 700;
-        }
-
-        .section-title:after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--primary-color);
-        }
-
-        .feature-box {
-            text-align: center;
-            padding: 30px 20px;
-            border-radius: 5px;
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-            border: 1px solid #e0e0e0;
-        }
-
-        .feature-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature-icon {
-            font-size: 50px;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-
-        .about-section {
-            background-color: #f9f9f9;
-            padding: 80px 0;
-        }
-
-        .contact-info {
-            margin-bottom: 20px;
-        }
-
-        .contact-icon {
-            font-size: 24px;
-            color: var(--primary-color);
-            margin-right: 10px;
-        }
-
-        .property-card {
-            margin-bottom: 30px;
-            border: none;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .property-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .property-img {
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--secondary-color);
-            border-color: var(--secondary-color);
-        }
-
-        .testimonial-card {
-            padding: 20px;
-            border-radius: 5px;
-            background-color: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            margin-bottom: 30px;
-        }
-
-        .testimonial-img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 20px;
-        }
-
-        .footer {
-            background-color: var(--dark-color);
-            color: white;
-            padding: 50px 0 20px;
-        }
-
-        .footer a {
-            color: var(--light-color);
-        }
-
-        .footer a:hover {
-            color: white;
-            text-decoration: none;
-        }
-
-        .social-icons a {
-            color: white;
-            font-size: 20px;
-            margin-right: 15px;
-        }
-
-        .social-icons a:hover {
-            color: var(--light-color);
-        }
-
-        .map-container {
-            height: 300px;
-            width: 100%;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        .stats-number {
-            font-size: 50px;
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-
-        .stats-label {
-            font-size: 18px;
-            color: var(--text-color);
-        }
-
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            z-index: 999;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .back-to-top.active {
-            opacity: 1;
-            visibility: visible;
-        }
-    </style>
+    <title>Quitação Veicular - Resolva sua dívida veicular de forma rápida e segura</title>
+    <meta name="description" content="Especialistas em negociação e quitação de veículos com as melhores condições do mercado">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <!-- Header -->
+    <header class="header">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="https://via.placeholder.com/150x50?text=Floresta+FII" alt="Floresta FII">
+            <a href="#" class="logo">
+                <span class="logo-text">Quitação Veicular</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <nav class="nav-desktop">
+                <a href="#inicio" class="nav-link">Início</a>
+                <a href="#sobre" class="nav-link">Sobre a Quitação</a>
+                <a href="#como-funciona" class="nav-link">Como Funciona</a>
+                <a href="#beneficios" class="nav-link">Benefícios</a>
+                <a href="#depoimentos" class="nav-link">Depoimentos</a>
+                <a href="#contato" class="nav-link">Contato</a>
+                <a href="#contato" class="cta-button">Solicitar Quitação</a>
+            </nav>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <svg width="28" height="28" fill="none" stroke="#002850" stroke-width="2">
+                    <rect x="5" y="7" width="18" height="2" rx="1"/>
+                    <rect x="5" y="15" width="18" height="2" rx="1"/>
+                </svg>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sobre">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#servicos">Serviços</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfólio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contato">Contato</a>
-                    </li>
-                </ul>
+            <div class="mobile-menu" id="mobileMenu">
+                <nav class="mobile-nav">
+                    <a href="#inicio" class="mobile-nav-link" onclick="closeMobileMenu()">Início</a>
+                    <a href="#sobre" class="mobile-nav-link" onclick="closeMobileMenu()">Sobre a Quitação</a>
+                    <a href="#como-funciona" class="mobile-nav-link" onclick="closeMobileMenu()">Como Funciona</a>
+                    <a href="#beneficios" class="mobile-nav-link" onclick="closeMobileMenu()">Benefícios</a>
+                    <a href="#depoimentos" class="mobile-nav-link" onclick="closeMobileMenu()">Depoimentos</a>
+                    <a href="#contato" class="mobile-nav-link" onclick="closeMobileMenu()">Contato</a>
+                    <a href="#contato" class="mobile-cta-button" onclick="closeMobileMenu()">Solicitar Quitação</a>
+                </nav>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section" id="home">
-        <div class="container">
-            <h1 class="display-4 fw-bold mb-4">Investindo no futuro do mercado imobiliário</h1>
-            <p class="lead mb-5">A COLEFAR LTDA oferece oportunidades exclusivas de investimento em imóveis de alto
-                potencial</p>
-            <a href="#contato" class="btn btn-primary btn-lg px-4 me-2">Fale Conosco</a>
-            <a href="#servicos" class="btn btn-outline-light btn-lg px-4">Nossos Serviços</a>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-3 col-6 mb-4">
-                    <div class="stats-number">R$ 50M+</div>
-                    <div class="stats-label">Em ativos</div>
-                </div>
-                <div class="col-md-3 col-6 mb-4">
-                    <div class="stats-number">15+</div>
-                    <div class="stats-label">Imóveis</div>
-                </div>
-                <div class="col-md-3 col-6 mb-4">
-                    <div class="stats-number">100+</div>
-                    <div class="stats-label">Investidores</div>
-                </div>
-                <div class="col-md-3 col-6 mb-4">
-                    <div class="stats-number">12%</div>
-                    <div class="stats-label">Rendimento médio</div>
+    <main>
+        <!-- Hero Banner -->
+        <section id="inicio" class="hero-banner">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Resolva sua dívida veicular <span class="accent-text">de forma rápida e segura!</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Especialistas em negociação e quitação de veículos com as melhores condições do mercado.
+                    </p>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Hyundai!" target="_blank" rel="noopener noreferrer" class="hero-cta">
+                        Simular Quitação no WhatsApp
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section class="about-section" id="sobre">
-        <div class="container">
-            <h2 class="text-center section-title">Sobre COLEFAR LTDA</h2>
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80"
-                        alt="Sobre nós" class="img-fluid rounded">
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <h3 class="mb-4">Nossa História</h3>
-                    <p>A COLEFAR LTDA foi fundada em 2023 com o objetivo de proporcionar aos investidores acesso a
-                        oportunidades imobiliárias de alto potencial com gestão profissional e transparente.</p>
-                    <p>Nosso CNPJ 04.962.103/0001-93 está registrado como Fundo de Investimento Imobiliário, com sede no
-                        prestigiado bairro do Itaim Bibi em São Paulo.</p>
-                    <p>Atuamos na identificação, aquisição e gestão de imóveis comerciais e residenciais de alto padrão,
-                        proporcionando renda regular e valorização do patrimônio para nossos cotistas.</p>
-                    <div class="row mt-4">
-                        <div class="col-md-6 mb-3">
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-check-circle fa-2x text-success me-3"></i>
-                                <div>
-                                    <h5 class="mb-0">Transparência</h5>
-                                    <p class="mb-0">Gestão profissional e relatórios detalhados</p>
-                                </div>
-                            </div>
+        <!-- Benefits -->
+        <section id="beneficios" class="benefits-section">
+            <div class="container">
+                <h2 class="section-title">Benefícios em quitar seu veículo</h2>
+                <div class="benefits-grid">
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Hyundai!" target="_blank" rel="noopener noreferrer" class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 13l3 3 7-7"/>
+                            </svg>
                         </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-chart-line fa-2x text-success me-3"></i>
-                                <div>
-                                    <h5 class="mb-0">Rentabilidade</h5>
-                                    <p class="mb-0">Foco em ativos com alto potencial</p>
-                                </div>
-                            </div>
+                        <h3 class="benefit-title">Redução de juros abusivos</h3>
+                        <p class="benefit-description">Negociamos para você a redução de taxas e eliminação de juros indevidos.</p>
+                    </a>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Hyundai!" target="_blank" rel="noopener noreferrer" class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="m22 21-3-3"/>
+                            </svg>
                         </div>
-                    </div>
+                        <h3 class="benefit-title">Negociação com bancos e financeiras</h3>
+                        <p class="benefit-description">Nossa equipe lida diretamente com bancos para facilitar sua vida.</p>
+                    </a>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Hyundai!" target="_blank" rel="noopener noreferrer" class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Liberação de gravame</h3>
+                        <p class="benefit-description">Veículo 100% quitado e regularizado, pronto para transferência.</p>
+                    </a>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Hyundai!" target="_blank" rel="noopener noreferrer" class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Documentação regularizada rapidamente</h3>
+                        <p class="benefit-description">Rapidez e segurança em todo o processo documental.</p>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Section -->
-    <section class="py-5" id="servicos">
-        <div class="container">
-            <h2 class="text-center section-title">Nossos Serviços</h2>
-            <p class="text-center mb-5">Oferecemos diversas opções de investimento imobiliário para atender às
-                necessidades de cada perfil de investidor.</p>
+        <!-- How It Works -->
+        <section id="como-funciona" class="how-it-works-section">
+            <div class="container">
+                <h2 class="section-title">Como funciona o processo</h2>
+                <div class="steps-grid">
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Hyundai!" target="_blank" rel="noopener noreferrer" class="step-card">
+                        <div class="step-icon">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 13l3 3 7-7"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">01. Análise gratuita da dívida</h3>
+                        <p class="step-description">Enviando seus dados, realizamos uma análise detalhada e sem compromisso.</p>
+                    </a>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Hyundai!" target="_blank" rel="noopener noreferrer" class="step-card">
+                        <div class="step-icon">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="m22 21-3-3"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">02. Negociação personalizada</h3>
+                        <p class="step-description">Buscamos as melhores condições junto ao seu banco ou financeira.</p>
+                    </a>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Hyundai!" target="_blank" rel="noopener noreferrer" class="step-card">
+                        <div class="step-icon">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">03. Quitação com garantia</h3>
+                        <p class="step-description">Você recebe o documento de quitação com toda a segurança exigida por lei.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <h4>Fundos Imobiliários</h4>
-                        <p>Invista em cotas de fundos especializados em diferentes segmentos do mercado imobiliário com
-                            potencial de valorização e geração de renda.</p>
-                    </div>
+        <!-- Highlight Section -->
+        <section class="highlight-section">
+            <div class="container highlight-content">
+                <div class="highlight-text">
+                    <h2 class="highlight-title">Quitação 100% Legalizada e com Garantia!</h2>
+                    <p class="highlight-subtitle">Conte com um time especializado e atendimento humanizado em todas as etapas.</p>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                            <i class="fas fa-home"></i>
-                        </div>
-                        <h4>Laudos Técnicos</h4>
-                        <p>Análises detalhadas e avaliações de imóveis para tomada de decisão de investimento com base
-                            em dados técnicos e mercadológicos.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                            <i class="fas fa-chart-pie"></i>
-                        </div>
-                        <h4>Gestão de Ativos</h4>
-                        <p>Administração profissional de imóveis com foco em maximizar o retorno financeiro através de
-                            estratégias de gestão ativa.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                            <i class="fas fa-search-dollar"></i>
-                        </div>
-                        <h4>Due Diligence</h4>
-                        <p>Análise detalhada de oportunidades de investimento para identificação de riscos e potenciais
-                            antes da aquisição.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                            <i class="fas fa-hand-holding-usd"></i>
-                        </div>
-                        <h4>Assessoria</h4>
-                        <p>Orientação especializada para investidores que desejam diversificar sua carteira com ativos
-                            imobiliários.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                            <i class="fas fa-file-contract"></i>
-                        </div>
-                        <h4>Relatórios</h4>
-                        <p>Informações periódicas sobre desempenho, posicionamento e perspectivas dos investimentos.</p>
+                <div class="highlight-badge">
+                    <div class="badge">
+                        <span class="badge-text">Atendimento Especializado</span>
+                        <span class="badge-star">★</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Portfolio Section -->
-    <section class="py-5 bg-light" id="portfolio">
-        <div class="container">
-            <h2 class="text-center section-title">Nosso Portfólio</h2>
-            <p class="text-center mb-5">Conheça alguns dos nossos principais empreendimentos e ativos sob gestão.</p>
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="card property-card">
-                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80"
-                            class="card-img-top property-img" alt="Edifício Comercial">
-                        <div class="card-body">
-                            <h5 class="card-title">Edifício Green Tower</h5>
-                            <p class="card-text">Edifício corporativo classe A+ localizado na Faria Lima, com 25 andares
-                                e 98% de ocupação.</p>
-                            <ul class="list-group list-group-flush mb-3">
-                                <li class="list-group-item"><i class="fas fa-map-marker-alt me-2"></i> São Paulo - SP
-                                </li>
-                                <li class="list-group-item"><i class="fas fa-arrows-alt me-2"></i> 25.000 m²</li>
-                                <li class="list-group-item"><i class="fas fa-percentage me-2"></i> Rendimento: 11,5%
-                                    a.a.</li>
-                            </ul>
-                            <a href="#" class="btn btn-primary">Detalhes</a>
+        <!-- Quick Questions -->
+        <section class="quick-questions-section">
+            <div class="container">
+                <h2 class="section-title">Perguntas Rápidas</h2>
+                <div class="questions-grid">
+                    <div class="question-card">
+                        <div class="question-icon">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                <path d="M12 17h.01"/>
+                            </svg>
                         </div>
+                        <h3 class="question-title">Posso quitar financiamentos atrasados?</h3>
+                        <p class="question-description">Sim, analisamos seu caso e negociamos diretamente com as financeiras e bancos para facilitar sua quitação.</p>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card property-card">
-                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80"
-                            class="card-img-top property-img" alt="Residencial">
-                        <div class="card-body">
-                            <h5 class="card-title">Residencial Forest Hills</h5>
-                            <p class="card-text">Conjunto residencial de alto padrão com 120 unidades em Moema, São
-                                Paulo.</p>
-                            <ul class="list-group list-group-flush mb-3">
-                                <li class="list-group-item"><i class="fas fa-map-marker-alt me-2"></i> São Paulo - SP
-                                </li>
-                                <li class="list-group-item"><i class="fas fa-arrows-alt me-2"></i> 15.000 m²</li>
-                                <li class="list-group-item"><i class="fas fa-percentage me-2"></i> Rendimento: 12,3%
-                                    a.a.</li>
-                            </ul>
-                            <a href="#" class="btn btn-primary">Detalhes</a>
+                    <div class="question-card">
+                        <div class="question-icon">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10,9 9,9 8,9"/>
+                            </svg>
                         </div>
+                        <h3 class="question-title">É possível renegociar parcelas?</h3>
+                        <p class="question-description">Oferecemos alternativas para renegociação, ajustando condições para cada perfil.</p>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card property-card">
-                        <img src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80"
-                            class="card-img-top property-img" alt="Shopping Center">
-                        <div class="card-body">
-                            <h5 class="card-title">Shopping Forest Mall</h5>
-                            <p class="card-text">Shopping center com 180 lojas, cinema e praça de alimentação em
-                                Campinas.</p>
-                            <ul class="list-group list-group-flush mb-3">
-                                <li class="list-group-item"><i class="fas fa-map-marker-alt me-2"></i> Campinas - SP
-                                </li>
-                                <li class="list-group-item"><i class="fas fa-arrows-alt me-2"></i> 45.000 m²</li>
-                                <li class="list-group-item"><i class="fas fa-percentage me-2"></i> Rendimento: 13,1%
-                                    a.a.</li>
-                            </ul>
-                            <a href="#" class="btn btn-primary">Detalhes</a>
+                    <div class="question-card">
+                        <div class="question-icon">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
                         </div>
+                        <h3 class="question-title">Consigo desconto na dívida?</h3>
+                        <p class="question-description">Na maioria dos casos! Seu histórico é avaliado para buscar as melhores condições.</p>
+                    </div>
+                    <div class="question-card">
+                        <div class="question-icon">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 9V5a3 3 0 0 0-6 0v4"/>
+                                <rect x="2" y="9" width="20" height="12" rx="2" ry="2"/>
+                                <circle cx="12" cy="15" r="1"/>
+                            </svg>
+                        </div>
+                        <h3 class="question-title">O processo é seguro?</h3>
+                        <p class="question-description">Total transparência: tudo documentado em contrato, sem surpresas.</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="text-center mt-4">
-                <a href="#" class="btn btn-outline-primary">Ver Todos os Ativos</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center section-title">O que dizem nossos investidores</h2>
-
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="testimonial-card">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Depoimento"
-                                class="testimonial-img">
-                            <div>
-                                <h5 class="mb-0">Ana Carolina Silva</h5>
-                                <p class="mb-0 text-muted">Investidora desde 2023</p>
-                            </div>
+        <!-- Differentials -->
+        <section class="differentials-section">
+            <div class="container">
+                <h2 class="section-title">Por que escolher a Quitação Veicular?</h2>
+                <div class="differentials-grid">
+                    <div class="differential-card">
+                        <div class="differential-icon">
+                            <svg class="icon accent-color" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"/>
+                                <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+                                <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+                                <path d="M13 12h6"/>
+                                <path d="M11 12H5"/>
+                            </svg>
                         </div>
-                        <p>"A COLEFAR LTDA trouxe para minha carteira a estabilidade que eu buscava. Os relatórios são
-                            transparentes e os rendimentos chegam sempre na data certa."</p>
-                        <div class="text-warning">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <h3 class="differential-title">100% Segurança Jurídica</h3>
+                        <p class="differential-description">Todo o processo legalizado, com acompanhamento especializado e garantia documental.</p>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testimonial-card">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Depoimento"
-                                class="testimonial-img">
-                            <div>
-                                <h5 class="mb-0">Roberto Almeida</h5>
-                                <p class="mb-0 text-muted">Investidor desde 2024</p>
-                            </div>
+                    <div class="differential-card">
+                        <div class="differential-icon">
+                            <svg class="icon accent-color" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 9V5a3 3 0 0 0-6 0v4"/>
+                                <rect x="2" y="9" width="20" height="12" rx="2" ry="2"/>
+                                <circle cx="12" cy="15" r="1"/>
+                            </svg>
                         </div>
-                        <p>"Excelente equipe de gestão. Eles realmente entendem do mercado imobiliário e sabem
-                            selecionar os melhores ativos. Minha carteira nunca esteve tão diversificada."</p>
-                        <div class="text-warning">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
+                        <h3 class="differential-title">Avaliação sem custo</h3>
+                        <p class="differential-description">Faça sua análise gratuitamente, sem compromisso. Transparência total!</p>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testimonial-card">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Depoimento"
-                                class="testimonial-img">
-                            <div>
-                                <h5 class="mb-0">Mariana Oliveira</h5>
-                                <p class="mb-0 text-muted">Investidora desde 2023</p>
-                            </div>
+                    <div class="differential-card">
+                        <div class="differential-icon">
+                            <svg class="icon accent-color" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
                         </div>
-                        <p>"A assessoria personalizada fez toda a diferença para mim que estava começando a investir em
-                            FIIs. Recomendo a todos que buscam segurança e bons retornos."</p>
-                        <div class="text-warning">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                        <h3 class="differential-title">Satisfação comprovada</h3>
+                        <p class="differential-description">Mais de 4.000 clientes atendidos e alta taxa de aprovação. Seu caso aqui é prioridade.</p>
+                    </div>
+                    <div class="differential-card">
+                        <div class="differential-icon">
+                            <svg class="icon accent-color" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="17,1 21,5 17,9"/>
+                                <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+                                <polyline points="7,23 3,19 7,15"/>
+                                <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+                            </svg>
                         </div>
+                        <h3 class="differential-title">Atendimento Humanizado</h3>
+                        <p class="differential-description">Equipe preparada e ágil, pronta para esclarecer dúvidas e dar pleno suporte.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section class="py-5 bg-light" id="contato">
-        <div class="container">
-            <h2 class="text-center section-title">Entre em Contato</h2>
-
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="contact-info">
-                        <h4 class="mb-4">Informações de Contato</h4>
-
-                        <div class="d-flex align-items-start mb-3">
-                            <i class="fas fa-map-marker-alt contact-icon mt-1"></i>
-                            <div>
-                                <h5>Endereço</h5>
-                                <p>
-                                    R GOV MILTON CAMPOS, 1154 – Bairro TUPI B <br>
-                                    Belo Horizonte – Minas Gerais <br>
-                                    CEP: 31844-440
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="d-flex align-items-start mb-3">
-                            <i class="fas fa-phone-alt contact-icon mt-1"></i>
-                            <div>
-                                <h5>Telefones</h5>
-                                <p>(11) 3165-6000<br>
-                                    (11) 96135-6048 (WhatsApp)</p>
-                            </div>
-                        </div>
-
-                        <div class="d-flex align-items-start mb-3">
-                            <i class="fas fa-envelope contact-icon mt-1"></i>
-                            <div>
-                                <h5>E-mail</h5>
-                                <p>financeiro@consulauditoria.com</p>
-                            </div>
-                        </div>
-
-                        <div class="d-flex align-items-start mb-3">
-                            <i class="fas fa-clock contact-icon mt-1"></i>
-                            <div>
-                                <h5>Horário de Funcionamento</h5>
-                                <p>Segunda a Sexta: 9h às 18h</p>
-                            </div>
-                        </div>
-
-                        <div class="mt-4">
-                            <h5>Redes Sociais</h5>
-                            <div class="social-icons">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="mb-4">Envie uma Mensagem</h4>
-                            <form>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Seu Nome" required>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="email" class="form-control" placeholder="Seu E-mail" required>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="tel" class="form-control" placeholder="Seu Telefone">
-                                </div>
-                                <div class="mb-3">
-                                    <select class="form-select">
-                                        <option selected>Assunto</option>
-                                        <option>Informações sobre Investimento</option>
-                                        <option>Dúvidas sobre Fundos</option>
-                                        <option>Proposta Comercial</option>
-                                        <option>Outros</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <textarea class="form-control" rows="5" placeholder="Sua Mensagem"
-                                        required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-                            </form>
-                        </div>
-                    </div>
+        <!-- Partners -->
+        <section class="partners-section">
+            <div class="container">
+                <h2 class="section-title">Nossos Parceiros</h2>
+                <div class="partners-grid">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="partner-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Square-blue.svg" alt="Logo Banco Alpha" class="partner-logo">
+                        <span class="partner-name">Banco Alpha</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="partner-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Square-red.svg" alt="Logo Financeira Beta" class="partner-logo">
+                        <span class="partner-name">Financeira Beta</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="partner-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Square-green.svg" alt="Logo Associação Gamma" class="partner-logo">
+                        <span class="partner-name">Associação Gamma</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="partner-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Square-yellow.svg" alt="Logo Instituto Delta" class="partner-logo">
+                        <span class="partner-name">Instituto Delta</span>
+                    </a>
                 </div>
             </div>
+        </section>
 
-            <div class="mt-5">
-                <div class="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.236558728748!2d-46.67477292468634!3d-23.5861538624921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5744e0ebff5b%3A0x769bf4a32f914782!2sR.%20Joaquim%20Floriano%2C%20100%20-%20Itaim%20Bibi%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004534-000!5e0!3m2!1spt-BR!2sbr!4v1717871234567!5m2!1spt-BR!2sbr"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- Testimonials -->
+        <section id="depoimentos" class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title">Depoimentos de Clientes</h2>
+                <div class="testimonials-container">
+                    <div class="testimonial-card" id="testimonialCard">
+                        <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Carlos Eduardo" class="testimonial-image">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text" id="testimonialText">"Consegui reduzir minha dívida em 50%! Atendimento nota 10."</p>
+                            <span class="testimonial-name" id="testimonialName">Carlos Eduardo</span>
+                        </div>
+                    </div>
+                    <button class="testimonial-nav prev" onclick="prevTestimonial()">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15,18 9,12 15,6"/>
+                        </svg>
+                    </button>
+                    <button class="testimonial-nav next" onclick="nextTestimonial()">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9,18 15,12 9,6"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="testimonial-dots" id="testimonialDots">
+                    <span class="dot active" onclick="currentTestimonial(0)"></span>
+                    <span class="dot" onclick="currentTestimonial(1)"></span>
+                    <span class="dot" onclick="currentTestimonial(2)"></span>
+                    <span class="dot" onclick="currentTestimonial(3)"></span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FAQ Section -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center section-title">Perguntas Frequentes</h2>
-
-            <div class="accordion" id="faqAccordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                            O que é um Fundo de Investimento Imobiliário (FII)?
+        <!-- FAQ -->
+        <section class="faq-section">
+            <div class="container faq-container">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(0)">
+                            <span>O que é quitação veicular?</span>
+                            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9"/>
+                            </svg>
                         </button>
-                    </h2>
-                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Um Fundo de Investimento Imobiliário (FII) é uma comunhão de recursos destinados à aplicação
-                            em empreendimentos imobiliários, que tem como objetivo proporcionar aos seus cotistas
-                            rendimentos periódicos, além da valorização das cotas. Os FIIs são regulamentados pela CVM e
-                            oferecem uma forma acessível de investir no mercado imobiliário.
+                        <div class="faq-answer">
+                            <p>É o processo onde uma dívida do veículo é negociada e paga, liberando o veículo de restrições e gravames.</p>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#faq2">
-                            Como posso investir na COLEFAR LTDA?
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(1)">
+                            <span>Como sei se estou apto a quitar?</span>
+                            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9"/>
+                            </svg>
                         </button>
-                    </h2>
-                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Para investir na COLEFAR LTDA, você pode entrar em contato conosco através dos telefones,
-                            e-mail ou formulário no site. Nossa equipe irá orientá-lo sobre o processo de abertura de
-                            conta, documentação necessária e valores mínimos para investimento, além de tirar todas as
-                            suas dúvidas sobre nossos fundos.
+                        <div class="faq-answer">
+                            <p>Basta ter um financiamento ativo ou pendências no veículo para que façamos a análise e proposta.</p>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#faq3">
-                            Qual é o valor mínimo para investir?
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(2)">
+                            <span>Quais documentos preciso?</span>
+                            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9"/>
+                            </svg>
                         </button>
-                    </h2>
-                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            O valor mínimo varia de acordo com o fundo escolhido. Temos opções a partir de R$ 5.000,00,
-                            possibilitando que diferentes perfis de investidores possam participar. Entre em contato
-                            para conhecer as opções mais adequadas ao seu perfil e objetivos financeiros.
+                        <div class="faq-answer">
+                            <p>RG, CPF, comprovante de residência e os documentos do veículo já são suficientes para iniciarmos.</p>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#faq4">
-                            Como são pagos os rendimentos?
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(3)">
+                            <span>Em quanto tempo o processo é finalizado?</span>
+                            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9"/>
+                            </svg>
                         </button>
-                    </h2>
-                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Os rendimentos são pagos mensalmente ou trimestralmente, dependendo do fundo, através de
-                            crédito em conta corrente ou reinvestimento automático, conforme escolha do cotista. Todos
-                            os pagamentos são acompanhados de relatório detalhado sobre a performance do fundo.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#faq5">
-                            Quais são os riscos envolvidos?
-                        </button>
-                    </h2>
-                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Como todo investimento, os FIIs apresentam riscos, como variação do valor das cotas,
-                            vacância dos imóveis e mudanças nas taxas de juros. No entanto, nossa estratégia de
-                            diversificação e gestão profissional busca mitigar esses riscos. Recomendamos que o
-                            investimento seja feito com horizonte de médio a longo prazo.
+                        <div class="faq-answer">
+                            <p>Após a negociação e pagamento, a quitação e regularização documental costumam ser rápidas, podendo variar conforme o banco/financeira.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- About Company -->
+        <section id="sobre" class="about-section">
+            <div class="container about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="Equipe Quitação Veicular" class="about-img">
+                </div>
+                <div class="about-text">
+                    <h2 class="about-title">Sobre a Quitação Veicular</h2>
+                    <p class="about-description">
+                        Há mais de 10 anos no mercado, somos referência nacional em soluções para quitação de veículos, atuando com transparência, ética e excelência em resultados para nossos clientes.
+                    </p>
+                    <div class="about-values">
+                        <div class="value-item">
+                            <h3 class="value-title">Missão</h3>
+                            <p class="value-text">Facilitar a vida do cliente, oferecendo o melhor em negociação de dívidas veiculares.</p>
+                        </div>
+                        <div class="value-item">
+                            <h3 class="value-title">Visão</h3>
+                            <p class="value-text">Ser reconhecidos como a empresa número 1 em quitação veicular do Brasil.</p>
+                        </div>
+                        <div class="value-item">
+                            <h3 class="value-title">Valores</h3>
+                            <p class="value-text">Ética, transparência, excelência e respeito ao cliente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <img src="https://via.placeholder.com/150x50?text=Floresta+FII" alt="Floresta FII" class="mb-3">
-                    <p>A COLEFAR LTDA é um fundo de investimento imobiliário com foco em proporcionar renda regular e
-                        valorização do patrimônio através de uma gestão profissional e transparente.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">Quitação Veicular</span>
+                    <p class="footer-description">
+                        Especialistas em negociação de dívidas e quitação de veículos com segurança, transparência e ética.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 mb-4">
-                    <h5>Links Rápidos</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#home">Home</a></li>
-                        <li class="mb-2"><a href="#sobre">Sobre Nós</a></li>
-                        <li class="mb-2"><a href="#servicos">Serviços</a></li>
-                        <li class="mb-2"><a href="#portfolio">Portfólio</a></li>
-                        <li class="mb-2"><a href="#contato">Contato</a></li>
-                    </ul>
+                <div class="footer-contact">
+                    <h4 class="footer-title">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        Contato
+                    </h4>
+                    <div class="contact-info">
+                        <span class="contact-item">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            contato@quitacaoveicular.com.br
+                        </span>
+                        <span class="contact-item">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">+55 11 99999-9999</a>
+                        </span>
+                        <span class="contact-item">
+                            Rua Exemplo, 123, São Paulo - SP
+                        </span>
+                    </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h5>Nossos Fundos</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#">COLEFAR LTDA Tijuca</a></li>
-                        <li class="mb-2"><a href="#">COLEFAR LTDA Green</a></li>
-                        <li class="mb-2"><a href="#">COLEFAR LTDA Premium</a></li>
-                        <li class="mb-2"><a href="#">COLEFAR LTDA Residencial</a></li>
-                        <li class="mb-2"><a href="#">COLEFAR LTDA Shoppings</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 mb-4">
-                    <h5>Newsletter</h5>
-                    <p>Assine nossa newsletter para receber atualizações e oportunidades de investimento.</p>
-                    <form class="mb-3">
-                        <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Seu E-mail">
-                            <button class="btn btn-primary" type="submit">Assinar</button>
-                        </div>
-                    </form>
+                <div class="footer-links">
+                    <h4 class="footer-title">Navegação</h4>
+                    <nav class="footer-nav">
+                        <a href="#inicio" class="footer-link">Início</a>
+                        <a href="#beneficios" class="footer-link">Benefícios</a>
+                        <a href="#como-funciona" class="footer-link">Como Funciona</a>
+                        <a href="#depoimentos" class="footer-link">Depoimentos</a>
+                        <a href="#contato" class="footer-link">Contato</a>
+                        <a href="#" class="footer-link">Termos de uso</a>
+                        <a href="#" class="footer-link">Política de Privacidade</a>
+                    </nav>
                 </div>
             </div>
-            <hr class="mt-4" style="background-color: rgba(255,255,255,0.1);">
-            <div class="row">
-                <div class="col-md-6 text"></div>
-                <p style="text-align: center;">CNPJ: 04.962.103/0001-93</p>
+            <div class="footer-bottom">
+                <span class="copyright">© 2024 Quitação Veicular. Todos os direitos reservados.</span>
+                <a href="#inicio" class="back-to-top">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="19" x2="12" y2="5"/>
+                        <polyline points="5,12 12,5 19,12"/>
+                    </svg>
+                    Voltar ao topo
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Hyundai!" target="_blank" rel="noopener noreferrer" class="whatsapp-float">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+        <span>Olá, Hyundai!</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
